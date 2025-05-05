@@ -667,3 +667,26 @@ h1 {
 .sticker-image img.loaded {
     filter: blur(0);
 }
+/* Ensure header height adapts to screen size */
+header {
+    padding: 1rem;
+    transition: padding 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+    }
+}
+/* Ensure your controls container has stable positioning */
+.controls {
+    position: relative; /* Needed for accurate offsetTop */
+    padding-top: 5px;
+    background: white;
+    z-index: 10;
+}
+
+/* Optional: Add subtle shadow when scrolled to */
+.controls:target {
+    box-shadow: 0 2px 15px rgba(255, 92, 0, 0.2);
+}
