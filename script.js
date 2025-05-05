@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     // Preloader animation
     const preloader = document.querySelector('.preloader');
@@ -25,6 +24,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 200);
 
         });
+        function smoothScrollToFilters() {
+            const searchContainer = document.querySelector('.controls');
+            if (!searchContainer) return;
+            
+            // Dynamic offset calculation
+            const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+            const isMobile = window.innerWidth <= 768;
+            
+            const offset = isMobile ? 
+                Math.min(headerHeight * 0.3, 50) : // Mobile: 30% of header height (max 50px)
+                Math.min(headerHeight * 0.5, 100); // Desktop: 50% of header height (max 100px)
+            
+            window.scrollTo({
+                top: searchContainer.offsetTop - offset,
+                behavior: 'smooth'
+            });
+        
+            }
+
 
     // Your existing product data and functions...
     const products = [
@@ -763,6 +781,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentPage > 1) {
                 currentPage--;
                 renderProducts();
+                smoothScrollToFilters();
             }
         });
         paginationContainer.appendChild(prevButton);
@@ -775,6 +794,7 @@ document.addEventListener('DOMContentLoaded', function() {
             pageButton.addEventListener('click', () => {
                 currentPage = i;
                 renderProducts();
+                smoothScrollToFilters();
             });
             paginationContainer.appendChild(pageButton);
         }
@@ -787,6 +807,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentPage < totalPages) {
                 currentPage++;
                 renderProducts();
+                smoothScrollToFilters();
             }
         });
         paginationContainer.appendChild(nextButton);
