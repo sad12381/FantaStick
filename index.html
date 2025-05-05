@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantastic Stickers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="preloader">
+        <div class="loader-content">
+            <img src="./img/logo.png" alt="Fantastic Logo" class="loader-logo">
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-text">Loading our vibrant stickers...</p>
+        </div>
+    </div>
+    <header>
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="logo-header">
+            <img src="./img/logo.png" alt="Fantastic Logo" class="logo">
+            <h1>FantaStick</h1>
+        </div>
+        <p class="tagline">Stick, Stick, Stick....Fantastick !</p>
+    </header>
+    
+
+    <div class="container">
+        <!-- How to Use Section -->
+        <section class="info-section">
+            <h2><i class="fas fa-question-circle"></i> How to Use Your Stickers</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-hand-holding"></i></div>
+                    <h3>Clean Surface</h3>
+                    <p>Wipe the surface with a clean, dry cloth to remove any dust or grease</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-sticky-note"></i></div>
+                    <h3>Peel & Stick</h3>
+                    <p>Gently peel the sticker from its backing and carefully place it</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-hand-paper"></i></div>
+                    <h3>Press Firmly</h3>
+                    <p>Apply pressure across the entire sticker to ensure proper adhesion</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Shop Section -->
+        <section class="info-section">
+            <h2><i class="fas fa-shopping-cart"></i> How to Shop</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-search"></i></div>
+                    <h3>Browse Collection</h3>
+                    <p>Explore our vibrant sticker designs below</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h3>Contact Us</h3>
+                    <p>Message us on WhatsApp or instagram with your selections</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Receive Your Order</h3>
+                    <p>Get your stickers delivered to your doorstep</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Request Section -->
+        <section class="request-section">
+            <h2><i class="fas fa-lightbulb"></i> Take a look, and if you Can't Find What You Need:</h2>
+            <p>Request custom stickers via WhatsApp - we'll bring your ideas to life!</p>
+            <a href="https://wa.me/212621348257?text=Hi%20Fantastick!,%20I'd%20like%20to%20request%20a%20custom%20sticker" class="request-btn">
+                <i class="fab fa-whatsapp"></i> Request Custom Stickers
+            </a>
+        </section>
+
+        <!-- Products Section -->
+        <div class="controls">
+            <div class="filter-sort">
+                <div class="search-bar">
+                    <input type="text" id="search" class="search-input" placeholder="Search stickers...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <select id="category-filter" class="fanta-select">
+                    <option value="">show all</option>
+                    <option value="Collections">Collections</option>
+                    <option value="Custom">Custom</option>
+                    <option value="Sticker">Sticker</option>
+                </select>
+                <select id="sort-by" class="fanta-select">
+                    <option value="default">Sort by</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="rating">Rating</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="products-grid" id="products-container">
+            <!-- Products will be inserted here by JavaScript -->
+        </div>
+
+        <div class="pagination" id="pagination">
+            <!-- Pagination will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <footer class="fantastic-footer">
+        <div class="social-links">
+            <a href="https://wa.me/212621348257" class="social-link" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com/fantastick.ma" class="social-link" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p class="copyright">© 2025 Fantastick. All rights reserved.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
